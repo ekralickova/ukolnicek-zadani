@@ -8,7 +8,7 @@ const Task = (props) => {
           <div class="task__name">${name}</div>
           <div class="task__due">${due}</div>
         </div>
-        <div class="task__done">${done === true ? "" : "✓"}</div>
+        <div class="task__done">${done === true ? "✓" : ""}</div>
       </div>
    `;
 };
@@ -29,7 +29,7 @@ checkbox.addEventListener('change', (event) => {
     event.preventDefault();
     let done = '';
     if (event.target.checked) {
-        done = '?done=true';
+        done = '?done=false';
     }
     fetch('https://apps.kodim.cz/daweb/trening-api/apis/tasks-api/tasks' + done)
         .then((response) => response.json())
