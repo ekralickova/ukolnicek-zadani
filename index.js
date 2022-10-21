@@ -2,7 +2,6 @@ const Task = (props) => {
     const { name, due, done } = props;
 
     return `
-      <div class=${done === true ? "" : "todo__tasks"}>
         <div class="task">
         <div class="task__body">
           <div class="task__name">${name}</div>
